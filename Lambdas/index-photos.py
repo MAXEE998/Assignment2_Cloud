@@ -36,6 +36,7 @@ def lambda_handler(event, context):
     
     file_key = event["Records"][0]["s3"]["object"]["key"]
     creation_time = event["Records"][0]["eventTime"]
+    print("change!")
     
     response = rekognition.detect_labels(
         Image={
