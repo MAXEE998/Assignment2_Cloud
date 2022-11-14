@@ -33,7 +33,7 @@ def create(key, doc):
 
 def lambda_handler(event, context):
     # TODO implement
-    
+    print("change!")
     file_key = event["Records"][0]["s3"]["object"]["key"]
     creation_time = event["Records"][0]["eventTime"]
     response = rekognition.detect_labels(
